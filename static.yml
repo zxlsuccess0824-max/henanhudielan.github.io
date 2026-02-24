@@ -1,0 +1,6 @@
+# 修改 Upload artifact 部分
+- name: Upload artifact
+  uses: actions/upload-pages-artifact@v3
+  with:
+    # 指定要部署的文件夹路径
+    path: './docs'  # 或 './dist'，或 '.' 表示整个仓库
