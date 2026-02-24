@@ -4,188 +4,178 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>河南紫罗兰医疗器械 · 齿科耗材专家</title>
-    <!-- Font Awesome 5 (free) 用于图标，让视觉更友好 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Font Awesome 6 (免费图标库) 提升视觉 - 修正版本 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', system-ui, sans-serif;
         }
 
         body {
-            background-color: #f4f7fc;
-            color: #1f2b3a;
+            background: #f2f5fa;
+            color: #1b2638;
             line-height: 1.5;
         }
 
-        /* 主容器 */
-        .wrapper {
+        .page {
             max-width: 1400px;
             margin: 0 auto;
             padding: 1.5rem 2rem;
         }
 
-        /* 顶部栏：公司名称 + 联系方式 */
-        .top-bar {
+        /* 头部 — 公司名 + 电话显著 */
+        .header {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
             background: white;
-            padding: 0.9rem 2rem;
+            padding: 0.8rem 2rem;
             border-radius: 60px;
-            box-shadow: 0 8px 18px rgba(99, 55, 148, 0.08);
+            box-shadow: 0 8px 16px rgba(98, 60, 148, 0.1);
             margin-bottom: 2rem;
-            border: 1px solid #ece3ff;
+            border: 1px solid #e4d6ff;
         }
 
-        .company-name {
+        .logo-area {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 1rem;
         }
 
-        .company-name i {
-            font-size: 2rem;
-            color: #6d41a1;
-            background: #f0e9ff;
-            padding: 0.6rem;
-            border-radius: 50%;
+        .logo-icon {
+            background: #7c4dff;
+            width: 50px;
+            height: 50px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
         }
 
-        .company-name h1 {
+        .logo-text h1 {
             font-size: 1.9rem;
             font-weight: 700;
-            letter-spacing: 0.5px;
+            color: #20253a;
         }
 
-        .company-name h1 span {
-            color: #6d41a1;
+        .logo-text h1 span {
+            color: #7c4dff;
             font-weight: 800;
         }
 
-        .contact-phone {
-            display: flex;
-            gap: 1.5rem;
+        .contact-highlight {
+            background: #261b38;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
             font-size: 1.4rem;
             font-weight: 600;
-            background: #2d1b48;
-            color: white;
-            padding: 0.7rem 2rem;
-            border-radius: 50px;
-            box-shadow: 0 5px 12px rgba(89, 43, 143, 0.4);
-        }
-
-        .contact-phone i {
-            margin-right: 0.5rem;
-            color: #ffd966;
-        }
-
-        .contact-phone .phone-item {
             display: flex;
-            align-items: center;
+            gap: 2rem;
+            box-shadow: 0 6px 14px #562f9e70;
         }
 
-        /* 主视觉区域 — 彰显“齿科耗材”“诚招代理” */
-        .hero-section {
-            background: linear-gradient(125deg, #ffffff 0%, #f3edff 100%);
+        .contact-highlight i {
+            color: #fdd835;
+            margin-right: 0.5rem;
+        }
+
+        /* 主视觉 — 聚合瓷 + 代理商 */
+        .hero {
+            background: linear-gradient(135deg, #ffffff 0%, #f3edff 100%);
             border-radius: 38px;
             padding: 2.5rem 3rem;
             margin-bottom: 2.8rem;
-            border: 1px solid #d8c4ff;
-            box-shadow: 0 20px 30px -10px rgba(91, 50, 138, 0.15);
+            border: 1px solid #d3bef5;
+            box-shadow: 0 20px 30px -8px #a184cf50;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-        }
-
-        .hero-text {
-            max-width: 65%;
         }
 
         .hero-text h2 {
             font-size: 2.8rem;
             font-weight: 600;
-            color: #232536;
         }
 
-        .hero-text h2 strong {
-            color: #6d41a1;
-            background: #e8daff;
-            padding: 0.1rem 0.8rem;
+        .hero-text .strong-brand {
+            color: #7c4dff;
+            background: #e9deff;
+            padding: 0.1rem 1.2rem;
             border-radius: 60px;
             display: inline-block;
             margin: 0.2rem 0;
         }
 
-        .hero-text .tagline {
-            font-size: 1.5rem;
-            margin: 1rem 0 0.5rem;
-            color: #1e293b;
-        }
-
-        .hero-text .feature-flags {
+        .hero-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.8rem;
-            margin-top: 1.2rem;
+            gap: 1rem;
+            margin-top: 1.4rem;
         }
 
-        .flag {
+        .tag {
             background: white;
             border-radius: 40px;
-            padding: 0.4rem 1.5rem;
+            padding: 0.4rem 1.6rem;
             font-weight: 600;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
-            border-left: 5px solid #9a73cf;
-            color: #2c1f41;
+            border-left: 5px solid #a27bdc;
+            box-shadow: 0 4px 8px #e0d0ff;
         }
 
-        .hero-badge {
-            background: #6d41a1;
+        .hero-cta {
+            background: #7c4dff;
             color: white;
+            padding: 1.5rem 2.2rem;
             border-radius: 80px;
-            padding: 1.2rem 2rem;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            box-shadow: 0 12px 24px -8px #6d41a180;
+            box-shadow: 0 12px 20px #7c4dff90;
         }
 
-        /* 总经销/代理条 */
-        .distributor-row {
+        .hero-cta i {
+            margin-right: 0.8rem;
+        }
+
+        /* 授权 / 总经销条 */
+        .partner-strip {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-around;
-            background: #ffffffdd;
+            background: #ffffffd9;
             backdrop-filter: blur(4px);
             border-radius: 60px;
             padding: 1.2rem 2rem;
             margin-bottom: 3rem;
-            border: 1px solid #d5bef0;
-            font-size: 1.2rem;
+            border: 1px solid #c9b1f0;
             font-weight: 500;
         }
 
-        .dist-item {
+        .partner-item {
             display: flex;
             align-items: center;
             gap: 0.8rem;
+            font-size: 1.15rem;
         }
 
-        .dist-item i {
+        .partner-item i {
             font-size: 1.6rem;
-            color: #6d41a1;
-            background: #ede3ff;
+            color: #7c4dff;
+            background: #efe8ff;
             border-radius: 50%;
             padding: 0.5rem;
         }
 
-        .dist-item span.brand {
-            background: #1f2937;
+        .partner-item .badge {
+            background: #242034;
             color: white;
             padding: 0.2rem 1.2rem;
             border-radius: 30px;
@@ -193,307 +183,296 @@
             margin-right: 0.3rem;
         }
 
-        /* 产品区域标题 */
+        /* 标题样式 */
         .section-title {
             font-size: 2.2rem;
             font-weight: 700;
-            margin: 2.5rem 0 1.5rem;
+            margin: 2.2rem 0 1.5rem;
             display: flex;
             align-items: center;
+            gap: 0.8rem;
         }
 
         .section-title i {
-            background: #6d41a1;
+            background: #7c4dff;
             color: white;
             border-radius: 50%;
             padding: 0.6rem;
-            font-size: 1.3rem;
-            margin-right: 1rem;
         }
 
-        /* 产品卡片网格 */
+        /* 产品网格 */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2.8rem;
         }
 
         .product-card {
             background: white;
             border-radius: 32px;
-            padding: 1.8rem 1.5rem;
-            box-shadow: 0 16px 30px -12px rgba(94, 54, 128, 0.2);
-            transition: all 0.2s ease;
-            border: 1px solid #f0e3ff;
+            padding: 1.8rem;
+            box-shadow: 0 18px 28px -12px #b89de0;
+            transition: 0.15s;
+            border: 1px solid #f5edff;
             display: flex;
             flex-direction: column;
         }
 
         .product-card:hover {
-            transform: translateY(-5px);
-            border-color: #b28beb;
+            transform: translateY(-4px);
+            border-color: #b28af0;
         }
 
         .product-icon {
-            font-size: 2.2rem;
-            background: #f1eaff;
+            background: #efe6ff;
             width: 60px;
             height: 60px;
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 20px;
+            font-size: 2rem;
+            color: #673ab7;
             margin-bottom: 1rem;
-            color: #5d3694;
         }
 
         .product-name {
             font-size: 1.9rem;
             font-weight: 700;
-            color: #191e2e;
-            margin-bottom: 0.3rem;
-            line-height: 1.2;
+            color: #181f30;
         }
 
         .product-sub {
-            font-size: 1rem;
-            color: #5b687f;
-            margin-bottom: 1rem;
-            border-bottom: 2px dotted #cbb2f0;
-            padding-bottom: 0.7rem;
+            color: #5b4b77;
+            font-size: 1.1rem;
+            border-bottom: 2px dashed #d8c4ff;
+            padding-bottom: 0.5rem;
+            margin: 0.3rem 0 1rem;
         }
 
-        .product-spec {
-            background: #f6f2fe;
+        .spec-detail {
+            background: #f3ecfe;
             border-radius: 30px;
             padding: 0.6rem 1.2rem;
-            font-size: 0.95rem;
-            margin: 0.5rem 0 1rem;
-            color: #2e2442;
+            font-size: 1rem;
+            margin: 0.6rem 0;
             font-weight: 500;
         }
 
-        .product-meta {
+        .product-footer {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.8rem 1.2rem;
+            gap: 0.8rem;
             margin-top: auto;
-            align-items: center;
+            padding-top: 0.8rem;
         }
 
-        .meta-tag {
-            background: #eae0f8;
-            border-radius: 40px;
+        .product-tag {
+            background: #e9dcff;
+            border-radius: 30px;
             padding: 0.2rem 1.2rem;
             font-weight: 500;
-            color: #3f2d5e;
+            color: #3c2a5a;
         }
 
-        /* 特殊重点产品：天天齿科螺旋扩弓器 多种规格 */
-        .special-series {
-            background: #2a1c3f;
-            border-radius: 42px;
-            padding: 2rem 2.5rem;
-            margin: 2.5rem 0;
-            color: white;
+        /* 螺旋扩弓器 特殊条 */
+        .expander-series {
+            background: #231b38;
+            border-radius: 50px;
+            padding: 2rem 2.8rem;
+            margin: 2rem 0;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
+            color: white;
         }
 
-        .special-left h3 {
-            font-size: 2.4rem;
+        .expander-left h3 {
+            font-size: 2.2rem;
             font-weight: 600;
         }
 
-        .special-left h3 small {
-            font-size: 1.2rem;
-            color: #c7adf0;
-            display: block;
+        .expander-left small {
+            font-size: 1rem;
+            color: #cfbcf5;
         }
 
-        .spec-numbers {
+        .expander-sizes {
+            background: #33294a;
+            border-radius: 60px;
+            padding: 1rem 2.2rem;
             display: flex;
             gap: 2rem;
-            background: #3a2b55;
-            padding: 1.2rem 2.5rem;
-            border-radius: 80px;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 700;
         }
 
-        .spec-numbers span {
-            background: #ffeedd;
-            color: #1f1a2e;
-            padding: 0.2rem 1rem;
-            border-radius: 30px;
+        .expander-sizes span {
+            background: #fcf3d7;
+            color: #1a122b;
+            padding: 0.2rem 1.2rem;
+            border-radius: 40px;
         }
 
-        /* 代理商号召区块 */
-        .agent-cta {
-            background: linear-gradient(145deg, #dcc9ff, #b396e8);
-            border-radius: 50px;
-            padding: 2.8rem 3rem;
+        /* 代理大区块 */
+        .agency-block {
+            background: linear-gradient(130deg, #b69af0, #8c65d4);
+            border-radius: 60px;
+            padding: 3rem 3rem;
             margin: 3rem 0 2rem;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-            box-shadow: 0 25px 30px -15px #9069c9;
+            color: #1c142b;
         }
 
-        .cta-left h2 {
+        .agency-left h2 {
             font-size: 2.8rem;
             font-weight: 800;
-            color: #1f122e;
         }
 
-        .cta-left h2 span {
+        .agency-left h2 span {
             background: white;
             padding: 0.2rem 1.2rem;
             border-radius: 60px;
-            margin-left: 0.8rem;
-            color: #4b2e77;
+            display: inline-block;
+            margin-top: 0.3rem;
         }
 
-        .cta-left p {
+        .agency-left p {
             font-size: 1.3rem;
-            color: #2a1f3c;
-            margin-top: 0.5rem;
+            margin-top: 0.8rem;
         }
 
-        .cta-right .agent-phone {
-            background: #251c35;
+        .agency-right .phone-block {
+            background: #1c132e;
             color: white;
-            padding: 1.2rem 2.5rem;
+            padding: 1.2rem 2.8rem;
             border-radius: 60px;
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 700;
-            box-shadow: 0 10px 0 #4f3e6b;
+            box-shadow: 0 12px 0 #4f3894;
         }
 
-        .cta-right .agent-phone i {
+        .agency-right i {
+            color: #ffd966;
             margin-right: 0.8rem;
-            color: #ffc107;
         }
 
         /* 页脚 */
         .footer {
             margin-top: 3.5rem;
             text-align: center;
-            border-top: 2px dashed #bfa4e6;
+            border-top: 2px dashed #bba5e8;
             padding-top: 2rem;
-            color: #4b4462;
-            font-size: 1rem;
+            color: #413b5c;
         }
 
-        .footer .phones {
-            font-size: 1.3rem;
-            font-weight: 600;
+        .footer-phones {
+            font-size: 1.4rem;
+            font-weight: 700;
             margin: 0.5rem 0;
-            color: #1f2b3a;
         }
 
-        /* 响应式调整 */
-        @media (max-width: 850px) {
-            .hero-text { max-width: 100%; }
-            .hero-badge { margin-top: 1.2rem; }
-            .contact-phone { font-size: 1.2rem; padding: 0.5rem 1.2rem; flex-wrap: wrap; gap: 0.5rem; }
-            .top-bar { flex-direction: column; gap: 1rem; }
-            .special-series { flex-direction: column; text-align: center; gap: 1rem; }
-            .spec-numbers { flex-wrap: wrap; justify-content: center; }
+        @media (max-width: 800px) {
+            .hero-cta { font-size: 1.4rem; padding: 1rem 1.5rem; }
+            .contact-highlight { font-size: 1.2rem; gap: 1rem; }
+            .expander-sizes { flex-wrap: wrap; justify-content: center; }
         }
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <!-- 头部：公司名+电话（高亮） -->
-        <div class="top-bar">
-            <div class="company-name">
-                <i class="fas fa-tooth"></i>
-                <h1>河南<span>紫罗兰</span>医疗器械</h1>
+    <div class="page">
+        <!-- 头部：公司名+两个电话醒目 -->
+        <div class="header">
+            <div class="logo-area">
+                <div class="logo-icon"><i class="fas fa-tooth"></i></div>
+                <div class="logo-text">
+                    <h1>河南<span>紫罗兰</span>医疗器械</h1>
+                </div>
             </div>
-            <div class="contact-phone">
-                <div class="phone-item"><i class="fas fa-phone-alt"></i> 18567420008</div>
-                <div class="phone-item"><i class="fas fa-phone-alt"></i> 17537248000</div>
+            <div class="contact-highlight">
+                <div><i class="fas fa-phone-alt"></i> 18567420008</div>
+                <div><i class="fas fa-phone-alt"></i> 17537248000</div>
             </div>
         </div>
 
-        <!-- 主视觉：聚合瓷 / 诚招代理 / 快速便捷 -->
-        <div class="hero-section">
+        <!-- 主视觉 —— 聚合瓷 诚招代理商 核心卖点 -->
+        <div class="hero">
             <div class="hero-text">
                 <h2>
-                    <strong>贺奈斯聚合瓷</strong> · 诚招代理商
+                    <span class="strong-brand">贺奈斯聚合瓷</span> · 诚招代理商
                 </h2>
-                <div class="tagline">
-                    <i class="fas fa-bolt" style="color:#6d41a1;"></i> 快速便捷 · 一个系统，成就一口好牙！
+                <div style="font-size:1.6rem; margin:0.6rem 0; color:#1a2844;">
+                    <i class="fas fa-bolt" style="color:#7c4dff;"></i> 快速便捷 · 一个系统，成就一口好牙！
                 </div>
-                <div class="feature-flags">
-                    <span class="flag"><i class="fas fa-check-circle"></i> 可预见的加工流程</span>
-                    <span class="flag"><i class="fas fa-teeth"></i> BPS生物性全口义齿</span>
-                    <span class="flag"><i class="fas fa-paint-brush"></i> 美学修复系统</span>
-                    <span class="flag"><i class="fas fa-tools"></i> 德国登特伦扩弓器</span>
+                <div class="hero-tags">
+                    <span class="tag"><i class="fas fa-chart-line"></i> 可预见的加工流程</span>
+                    <span class="tag"><i class="fas fa-teeth"></i> BPS生物性全口义齿</span>
+                    <span class="tag"><i class="fas fa-paint-brush"></i> 美学修复系统</span>
+                    <span class="tag"><i class="fas fa-tools"></i> 德国登特伦扩弓器</span>
                 </div>
             </div>
-            <div class="hero-badge">
+            <div class="hero-cta">
                 <i class="fas fa-handshake"></i> 省级代理
             </div>
         </div>
 
-        <!-- 总经销/授权条 (来自图片信息) -->
-        <div class="distributor-row">
-            <div class="dist-item"><i class="fas fa-certificate"></i> <span class="brand">Zhermack</span> Dental 合作伙伴</div>
-            <div class="dist-item"><i class="fas fa-crown"></i> <span class="brand">金玛克</span> 中国总经销</div>
-            <div class="dist-item"><i class="fas fa-globe"></i> <span class="brand">德国登特伦</span> 扩弓器</div>
-            <div class="dist-item"><i class="fas fa-flask"></i> <span class="brand">SJK Lab.</span> 蜡刀加热器</div>
+        <!-- 品牌授权条 —— Zhermack · 金玛克总经销 · 登特伦等 -->
+        <div class="partner-strip">
+            <div class="partner-item"><i class="fab fa-avianex"></i> <span class="badge">Zhermack</span> Dental 合作伙伴</div>
+            <div class="partner-item"><i class="fas fa-crown"></i> <span class="badge">金玛克</span> 中国总经销</div>
+            <div class="partner-item"><i class="fas fa-globe-europe"></i> <span class="badge">德国登特伦</span> 扩弓器</div>
+            <div class="partner-item"><i class="fas fa-flask"></i> <span class="badge">SJK Lab.</span> 蜡刀加热器</div>
         </div>
 
         <!-- 产品系列标题 -->
         <div class="section-title">
-            <i class="fas fa-chevron-circle-right"></i> 核心齿科耗材
+            <i class="fas fa-chevron-circle-down"></i> 核心齿科耗材
         </div>
 
-        <!-- 产品卡片网格  (包含图片中所有关键产品) -->
+        <!-- 产品网格 —— 涵盖所有图片提到的产品 -->
         <div class="product-grid">
             <!-- 蜡刀加热器 -->
             <div class="product-card">
                 <div class="product-icon"><i class="fas fa-fire"></i></div>
                 <div class="product-name">蜡刀加热器</div>
                 <div class="product-sub">J28-3 · 220V 国标</div>
-                <div class="product-spec"><i class="fas fa-microchip"></i> duction Graver Lab · 精准温控</div>
-                <div class="product-meta">
-                    <span class="meta-tag">SJK Lab.TECHNIC</span>
-                    <span class="meta-tag">CHINA</span>
+                <div class="spec-detail"><i class="fas fa-microscope"></i> duction Graver Lab · 精准恒温</div>
+                <div class="product-footer">
+                    <span class="product-tag">SJK Lab.TECHNIC</span>
+                    <span class="product-tag">CHINA</span>
                 </div>
             </div>
 
-            <!-- 天天齿科螺旋扩弓器 8/10/12mm -->
+            <!-- 天天齿科螺旋扩弓器 408系列 -->
             <div class="product-card">
                 <div class="product-icon"><i class="fas fa-cogs"></i></div>
                 <div class="product-name">螺旋扩弓器</div>
                 <div class="product-sub">骨扩弓型 · 川型</div>
-                <div class="product-spec">
-                    <span style="margin-right: 1rem;">408-427 8mm</span>
-                    <span style="margin-right: 1rem;">408-428 10mm</span>
+                <div class="spec-detail">
+                    <span style="margin-right:1rem;">408-427 8mm</span>
+                    <span style="margin-right:1rem;">408-428 10mm</span>
                     <span>408-429 12mm</span>
                 </div>
-                <div class="product-meta">
-                    <span class="meta-tag"><i class="fas fa-tag"></i> TIANTIANDental</span>
-                    <span class="meta-tag">天天齿科</span>
+                <div class="product-footer">
+                    <span class="product-tag"><i class="fas fa-tag"></i> TIANTIANDental</span>
+                    <span class="product-tag">天天齿科</span>
                 </div>
             </div>
 
-            <!-- 贺奈斯聚合瓷 专门卡片 -->
+            <!-- 贺奈斯聚合瓷 -->
             <div class="product-card">
                 <div class="product-icon"><i class="fas fa-gem"></i></div>
                 <div class="product-name">贺奈斯聚合瓷</div>
-                <div class="product-sub">美学修复 · 高透强度</div>
-                <div class="product-spec">一个系统成就好牙 · 快速便捷</div>
-                <div class="product-meta">
-                    <span class="meta-tag">全口/嵌体/贴面</span>
-                    <span class="meta-tag">义齿修复</span>
+                <div class="product-sub">美学修复 · 高强度</div>
+                <div class="spec-detail">一个系统成就好牙 · 快速便捷</div>
+                <div class="product-footer">
+                    <span class="product-tag">嵌体/贴面/冠</span>
+                    <span class="product-tag">义齿修复</span>
                 </div>
             </div>
 
@@ -502,10 +481,10 @@
                 <div class="product-icon"><i class="fas fa-teeth-open"></i></div>
                 <div class="product-name">BPS生物性</div>
                 <div class="product-sub">全口义齿系统</div>
-                <div class="product-spec">可预见的加工流程 · 生物功能</div>
-                <div class="product-meta">
-                    <span class="meta-tag">吸附性义齿</span>
-                    <span class="meta-tag">稳定舒适</span>
+                <div class="spec-detail">可预见的加工流程 · 生物功能</div>
+                <div class="product-footer">
+                    <span class="product-tag">吸附性义齿</span>
+                    <span class="product-tag">Ivoclar</span>
                 </div>
             </div>
 
@@ -514,73 +493,69 @@
                 <div class="product-icon"><i class="fas fa-wrench"></i></div>
                 <div class="product-name">德国登特伦</div>
                 <div class="product-sub">扩弓器 · 正畸系列</div>
-                <div class="product-spec">精密螺旋 · 多种尺寸</div>
-                <div class="product-meta">
-                    <span class="meta-tag">原装进口</span>
-                    <span class="meta-tag">Dentaurum</span>
+                <div class="spec-detail">精密螺旋 · 原装进口</div>
+                <div class="product-footer">
+                    <span class="product-tag">Dentaurum</span>
+                    <span class="product-tag">多种规格</span>
                 </div>
             </div>
 
-            <!-- 金玛克总经销系列 (整合) -->
+            <!-- 金玛克总经销系列 -->
             <div class="product-card">
                 <div class="product-icon"><i class="fas fa-boxes"></i></div>
                 <div class="product-name">金玛克</div>
                 <div class="product-sub">中国总经销 · 全系耗材</div>
-                <div class="product-spec">模型材料、聚合瓷、车针、硅橡胶</div>
-                <div class="product-meta">
-                    <span class="meta-tag">授权代理</span>
-                    <span class="meta-tag">库存充足</span>
+                <div class="spec-detail">聚合瓷、模型、车针、硅橡胶</div>
+                <div class="product-footer">
+                    <span class="product-tag">授权代理</span>
+                    <span class="product-tag">库存充足</span>
                 </div>
             </div>
         </div>
 
-        <!-- 特别强调：天天齿科 408 系列 + 骨扩弓型 -->
-        <div class="special-series">
-            <div class="special-left">
+        <!-- 天天齿科 408 特殊展示 骨扩弓型 + 8/10/12mm -->
+        <div class="expander-series">
+            <div class="expander-left">
                 <h3>天天齿科 螺旋扩弓器 <small>骨扩弓型 · 川型</small></h3>
             </div>
-            <div class="spec-numbers">
+            <div class="expander-sizes">
                 <span>8mm 408-427</span>
                 <span>10mm 408-428</span>
                 <span>12mm 408-429</span>
             </div>
         </div>
 
-        <!-- 再展示一些辅助设备/蜡刀加热器细节 并添加 "诚招代理商" 聚合瓷标语 -->
-        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin: 2rem 0; background: #fcf9ff; border-radius: 40px; padding: 2rem;">
-            <div style="flex: 2; min-width: 250px;">
-                <h3 style="font-size: 1.8rem; color:#3c285a"><i class="fas fa-bolt" style="color:#855fc6;"></i> 蜡刀加热器 J28-3</h3>
-                <p style="font-size: 1.1rem;">duction Graver Lab · 220V国标 · SJK Lab.TECHNIC CHINA · 精准控温，齿科技工所首选</p>
-            </div>
-            <div style="flex: 1; background: #e0cffc; border-radius: 60px; padding: 1rem 2rem; text-align: center; font-weight: 700; color: #281c3a;">
-                <i class="fas fa-tag"></i> 现货供应
-            </div>
+        <!-- 蜡刀加热器 额外细节 (SJK) -->
+        <div style="background: #f0e9ff; border-radius: 40px; padding: 1.5rem 2rem; margin: 1.5rem 0; display: flex; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <i class="fas fa-plug" style="font-size:2.2rem; background:#7c4dff; color:white; padding:0.8rem; border-radius:50%;"></i>
+            <div><strong style="font-size:1.5rem;">蜡刀加热器 J28-3</strong> <span style="background: #2b1d42; color:white; padding:0.2rem 1.2rem; border-radius:40px; margin-left:1rem;">duction Graver Lab</span></div>
+            <div style="margin-left:auto;">220V 国标 · SJK Lab.TECHNIC CHINA</div>
         </div>
 
-        <!-- 强号召力区块：聚合瓷招商 + 联系电话 -->
-        <div class="agent-cta">
-            <div class="cta-left">
+        <!-- 聚合瓷代理商 + 电话块 -->
+        <div class="agency-block">
+            <div class="agency-left">
                 <h2>贺奈斯聚合瓷 <span>诚招代理商</span></h2>
-                <p><i class="fas fa-check-circle"></i> 一个系统 · 成就一口好牙！可预见加工流程</p>
+                <p><i class="fas fa-check-circle"></i> 一个系统，成就一口好牙！可预见加工流程 · 美学修复</p>
             </div>
-            <div class="cta-right">
-                <div class="agent-phone">
-                    <i class="fas fa-headset"></i> 18567420008
+            <div class="agency-right">
+                <div class="phone-block">
+                    <i class="fas fa-phone-alt"></i> 18567420008
                 </div>
-                <div style="margin-top: 0.8rem; text-align: center; color: #241d34;">17537248000 (同微信)</div>
+                <div style="text-align:center; margin-top:0.8rem; font-size:1.4rem; color: #1f1730;">
+                    <i class="fas fa-phone-alt"></i> 17537248000
+                </div>
             </div>
         </div>
 
-        <!-- 底部联系方式再次强化，并包含公司全称及经营范围 -->
+        <!-- 底部再次展示公司全称和联系方式，以及经营类目 -->
         <div class="footer">
-            <div style="font-size: 1.5rem; font-weight: 700; color:#412d63;">河南紫罗兰医疗器械有限公司</div>
-            <div style="margin: 0.5rem 0;">齿科耗材全方案 · Zhermack · 金玛克 · 德国登特伦 · 天天齿科 · BPS · 贺奈斯聚合瓷</div>
-            <div class="phones">
-                <i class="fas fa-phone-square-alt"></i> 18567420008  &nbsp;&nbsp;|&nbsp;&nbsp; 17537248000
+            <div style="font-size: 2rem; font-weight: 700; color:#482c7a;">河南紫罗兰医疗器械有限公司</div>
+            <div style="margin: 0.7rem 0;">齿科耗材全案 · Zhermack · 金玛克 · 德国登特伦 · 天天齿科 · BPS · 贺奈斯聚合瓷</div>
+            <div class="footer-phones">
+                <i class="fas fa-mobile-alt"></i> 18567420008  &nbsp;&nbsp;|&nbsp;&nbsp; 17537248000
             </div>
-            <div style="margin-top: 1rem; opacity: 0.7;">
-                © 2025 河南紫罗兰医疗器械有限公司 版权所有   |  豫卫械备字XX号
-            </div>
+            <div style="margin-top: 1.5rem; opacity: 0.7;">© 2025 河南紫罗兰医疗器械有限公司 版权所有   |  医疗器械经营备案号2025XXXX</div>
         </div>
     </div>
 </body>
